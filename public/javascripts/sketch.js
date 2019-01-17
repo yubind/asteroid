@@ -16,6 +16,11 @@ function draw() {
     for(var i = 0; i < lasers.length; i++) {
         lasers[i].render();
         lasers[i].update();
+        for(var j = 0; j < asteroids.length; j++) {
+            if(lasers[i].hits(asteroids[j])) {
+            
+            }
+        }
     }
     
     for(var i = 0; i < asteroids.length; i++) {
