@@ -18,7 +18,9 @@ function draw() {
         lasers[i].update();
         for(var j = 0; j < asteroids.length; j++) {
             if(lasers[i].hits(asteroids[j])) {
-            
+                var newAsteroids = asteroids[j].breakup();
+                asteroids.push(newAsteroids);
+                asteroids.splice(j, 1);
             }
         }
     }
